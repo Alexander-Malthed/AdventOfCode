@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-class Program
+class Day4
 {
     static void Main(string[] args)
     {

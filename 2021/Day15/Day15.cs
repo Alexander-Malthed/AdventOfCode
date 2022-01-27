@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace Day_15
 {
-    class Day_15
+    class Day15
     {
         static Node[][] map;
         static int mapYLenght, mapXLenght;

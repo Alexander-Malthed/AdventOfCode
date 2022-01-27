@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace Day_12
-{
-    class Program
+    class Day12
     {
         static Dictionary<string, List<string>> allCaves = new Dictionary<string, List<string>>();
         static List<string> paths = new List<string>();
@@ -116,4 +114,3 @@ namespace Day_12
             }
         }
     }
-}
