@@ -5,7 +5,7 @@ class Day4
 {
     static void Main(string[] args)
     {
-        string[] input = File.ReadAllLines("D:/Code/input.txt");
+        string[] input = File.ReadAllLines("D:/AdventOfCode/2021/Day4/input.txt");
 
         int[] numbers = Array.ConvertAll(input[0].Split(','), element => int.Parse(element));
         CleanInput(input);
@@ -94,7 +94,10 @@ class Day4
                 }
             }
         }
-        Console.WriteLine(result * bingoNumber);
+
+        result *= bingoNumber;
+        File.WriteAllText("D:/AdventOfCode/2021/Day4/result.txt", result.ToString());
+        Console.WriteLine(result);
     }
 
     static void CleanInput(string[] input)

@@ -12,7 +12,7 @@ class Day10
 
     static void Part1()
     {
-        string[] input = File.ReadAllLines(@"D:/Code/input.txt");
+        string[] input = File.ReadAllLines(@"D:/AdventOfCode/2021/Day10/input.txt");
 
         string chunkOrder = string.Empty;
         bool lineIsCorrupted = false;
@@ -122,12 +122,13 @@ class Day10
             }
         }
 
+        File.WriteAllText("D:/AdventOfCode/2021/Day10/result.txt", result.ToString());
         Console.WriteLine(result);
     }
 
     static void Part2()
     {
-        string[] input = File.ReadAllLines(@"D:/Code/input.txt");
+        string[] input = File.ReadAllLines(@"D:/AdventOfCode/2021/Day10/input.txt");
 
         List<ulong> scores = new List<ulong>();
 
@@ -242,6 +243,8 @@ class Day10
 
         scores.Sort();
         ulong middleScore = scores[scores.Count / 2];
+
+        File.WriteAllText("D:/AdventOfCode/2021/Day10/result.txt", middleScore.ToString());
         Console.WriteLine("Middlescore: " + middleScore);
     }
 

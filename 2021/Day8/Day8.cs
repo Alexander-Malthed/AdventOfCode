@@ -19,7 +19,7 @@ class Day8
 
     static void Part1()
     {
-        string[] input = File.ReadAllLines(@"D:/Code/input.txt");
+        string[] input = File.ReadAllLines(@"D:/AdventOfCode/2021/Day8/input.txt");
 
         int numOf1 = 0;
         int numOf4 = 0;
@@ -55,12 +55,14 @@ class Day8
             }
         }
 
-        Console.WriteLine(numOf1 + numOf4 + numOf7 + numOf8);
+        int result = numOf1 + numOf4 + numOf7 + numOf8;
+        File.WriteAllText("D:/AdventOfCode/2021/Day8/result.txt", result.ToString());
+        Console.WriteLine(result);
     }
 
     static void Part2()
     {
-        string[] input = File.ReadAllLines(@"D:/Code/input.txt");
+        string[] input = File.ReadAllLines(@"D:/AdventOfCode/2021/Day8/input.txt");
 
         int result = 0;
 
@@ -211,6 +213,7 @@ class Day8
             result += int.Parse(value);
         }
 
+        File.WriteAllText("D:/AdventOfCode/2021/Day8/result.txt", result.ToString());
         Console.WriteLine(result);
     }
 }

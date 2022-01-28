@@ -5,12 +5,15 @@ class Day5
 {
     static void Main(string[] args)
     {
-        string[] input = File.ReadAllLines(@"D:/Code/input.txt");
+        string[] input = File.ReadAllLines(@"D:/AdventOfCode/2021/Day5/input.txt");
 
         CleanInput(input);
         int[,] grid = new int[999, 999];
         DrawLines(input, grid);
-        Console.WriteLine(CountOverlaps(grid));
+
+        int result = CountOverlaps(grid);
+        File.WriteAllText("D:/AdventOfCode/2021/Day5/result.txt", result.ToString());
+        Console.WriteLine(result);
     }
 
     static void CleanInput(string[] input)

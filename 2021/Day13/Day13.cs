@@ -6,7 +6,7 @@ class Day13
 {
     static void Main(string[] args)
     {
-        string[] input = File.ReadAllLines(@"D:/Code/input.txt");
+        string[] input = File.ReadAllLines(@"D:/AdventOfCode/2021/Day13/input.txt");
         List<int[]> dots = new List<int[]>();
         List<Fold> folds = new List<Fold>();
 
@@ -74,7 +74,7 @@ class Day13
         {
             for (int j = 0; j < paper.GetLength(1); j++)
             {
-                paper[i, j] = '.';
+                paper[i, j] = ' ';
             }
         }
         foreach (var dot in dots)
@@ -82,15 +82,18 @@ class Day13
             paper[dot[0], dot[1]] = '#';
         }
 
+        string result = string.Empty;
         for (int i = 0; i < paper.GetLength(1); i++)
         {
             for (int j = 0; j < paper.GetLength(0); j++)
             {
-                Console.Write(paper[j, i]);
+                result += paper[j, i];
             }
-            Console.Write("\n");
+            result += "\n";
         }
-        return;
+
+        File.WriteAllText("D:/AdventOfCode/2021/Day13/result.txt", result);
+        Console.WriteLine(result);
     }
 }
 

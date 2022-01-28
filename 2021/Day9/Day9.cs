@@ -12,7 +12,7 @@ class Day9
 
     static void Part1()
     {
-        string[] input = File.ReadAllLines(@"D:/Code/input.txt");
+        string[] input = File.ReadAllLines(@"D:/AdventOfCode/2021/Day9/input.txt");
         int[,] grid = new int[input.Length, input[0].Length];
 
         for (int i = 0; i < input.Length; i++)
@@ -43,13 +43,13 @@ class Day9
             }
         }
 
-
+        File.WriteAllText("D:/AdventOfCode/2021/Day9/result.txt", result.ToString());
         Console.WriteLine(result);
     }
 
     static void Part2()
     {
-        string[] input = File.ReadAllLines(@"D:/Code/input.txt");
+        string[] input = File.ReadAllLines(@"D:/AdventOfCode/2021/Day9/input.txt");
         int[,] grid = new int[input.Length, input[0].Length];
 
         for (int i = 0; i < input.Length; i++)
@@ -127,6 +127,8 @@ class Day9
         }
         Array.Sort(orderedBasins, (a, b) => b.CompareTo(a));
 
-        Console.WriteLine(orderedBasins[0] * orderedBasins[1] * orderedBasins[2]);
+        int result = orderedBasins[0] * orderedBasins[1] * orderedBasins[2];
+        File.WriteAllText("D:/AdventOfCode/2021/Day9/result.txt", result.ToString());
+        Console.WriteLine(result);
     }
 }

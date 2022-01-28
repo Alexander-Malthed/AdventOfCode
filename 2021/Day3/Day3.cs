@@ -12,7 +12,7 @@ class Day3
 
     static void Part1()
     {
-        string[] input = File.ReadAllLines("D:/Code/input.txt");
+        string[] input = File.ReadAllLines("D:/AdventOfCode/2021/Day3/input.txt");
 
         string gamma = "";
         string epsilon = "";
@@ -38,12 +38,14 @@ class Day3
             }
         }
 
-        Console.WriteLine(Convert.ToInt32(gamma, 2) * Convert.ToInt32(epsilon, 2));
+        int result = Convert.ToInt32(gamma, 2) * Convert.ToInt32(epsilon, 2);
+        File.WriteAllText("D:/AdventOfCode/2021/Day3/result.txt", result.ToString());
+        Console.WriteLine(result);
     }
 
     static void Part2()
     {
-        string[] input = File.ReadAllLines("D:/Code/input.txt");
+        string[] input = File.ReadAllLines("D:/AdventOfCode/2021/Day3/input.txt");
 
         List<int> validsIndices = new List<int>();
         int oxygen = 0, co2 = 0;
@@ -110,6 +112,8 @@ class Day3
             findingOxygen = false;
         }
 
-        Console.WriteLine(oxygen * co2);
+        int result = oxygen * co2;
+        File.WriteAllText("D:/AdventOfCode/2021/Day3/result.txt", result.ToString());
+        Console.WriteLine(result);
     }
 }

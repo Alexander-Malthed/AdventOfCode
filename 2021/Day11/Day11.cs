@@ -11,7 +11,7 @@ class Day11
 
     static void Main(string[] args)
     {
-        string[] input = File.ReadAllLines(@"D:/Code/input.txt");
+        string[] input = File.ReadAllLines(@"D:/AdventOfCode/2021/Day11/input.txt");
 
         grid = new int[input[0].Length, input.Length];
         hasFlashedThisTurn = new bool[input[0].Length, input.Length];
@@ -64,7 +64,8 @@ class Day11
             }
         }
 
-        PrintGrid();
+        //PrintGrid();
+        File.WriteAllText("D:/AdventOfCode/2021/Day11/result.txt", numberOfFlashes.ToString());
         Console.WriteLine("First step in sync: " + numberOfFlashes);
     }
 

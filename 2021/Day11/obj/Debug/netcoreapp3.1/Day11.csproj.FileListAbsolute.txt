@@ -1,0 +1,13 @@
+D:\AdventOfCode\2021\Day11\bin\Debug\netcoreapp3.1\Day11.exe
+D:\AdventOfCode\2021\Day11\bin\Debug\netcoreapp3.1\Day11.deps.json
+D:\AdventOfCode\2021\Day11\bin\Debug\netcoreapp3.1\Day11.runtimeconfig.json
+D:\AdventOfCode\2021\Day11\bin\Debug\netcoreapp3.1\Day11.runtimeconfig.dev.json
+D:\AdventOfCode\2021\Day11\bin\Debug\netcoreapp3.1\Day11.dll
+D:\AdventOfCode\2021\Day11\bin\Debug\netcoreapp3.1\Day11.pdb
+D:\AdventOfCode\2021\Day11\obj\Debug\netcoreapp3.1\Day11.csprojAssemblyReference.cache
+D:\AdventOfCode\2021\Day11\obj\Debug\netcoreapp3.1\Day11.csproj.CoreCompileInputs.cache
+D:\AdventOfCode\2021\Day11\obj\Debug\netcoreapp3.1\Day11.AssemblyInfoInputs.cache
+D:\AdventOfCode\2021\Day11\obj\Debug\netcoreapp3.1\Day11.AssemblyInfo.cs
+D:\AdventOfCode\2021\Day11\obj\Debug\netcoreapp3.1\Day11.dll
+D:\AdventOfCode\2021\Day11\obj\Debug\netcoreapp3.1\Day11.pdb
+D:\AdventOfCode\2021\Day11\obj\Debug\netcoreapp3.1\Day11.genruntimeconfig.cache

@@ -5,12 +5,14 @@ class Day2
 {
     static void Main(string[] args)
     {
-        string[] input = File.ReadAllLines("D:/Code/input.txt");
+        string[] input = File.ReadAllLines("D:/AdventOfCode/2021/Day2/input.txt");
 
-        //Console.WriteLine(Part1(input));
-        Console.WriteLine(Part2(input));
+        int result;
+        //result = Part1(input);
+        result = Part2(input);
 
-        Console.ReadKey();
+        File.WriteAllText("D:/AdventOfCode/2021/Day2/result.txt", result.ToString());
+        Console.WriteLine(result);
     }
 
     static int Part1(string[] input)

@@ -5,7 +5,7 @@ class Day6
 {
     static void Main(string[] args)
     {
-        string[] input = File.ReadAllText(@"D:/Code/input.txt").Split(',');
+        string[] input = File.ReadAllText(@"D:/AdventOfCode/2021/Day6/input.txt").Split(',');
         ulong[] fish = new ulong[9];
 
         // count starting numbers
@@ -16,10 +16,12 @@ class Day6
         {
             Console.WriteLine($"number of {i}: " + fish[i]);
         }
-        Console.WriteLine("--------------");
+
+        Console.Write("\n");
+
         ulong temp1, temp2;
         int placeIndex;
-        for (ulong i = 0; i < 80; i++)
+        for (ulong i = 0; i < 256; i++)
         {
             placeIndex = 7;
             temp1 = fish[8];
@@ -44,6 +46,8 @@ class Day6
             Console.WriteLine($"number of {i}: " + fish[i]);
             result += fish[i];
         }
-        Console.WriteLine("Total fish: " + result);
+
+        File.WriteAllText("D:/AdventOfCode/2021/Day6/result.txt", result.ToString());
+        Console.WriteLine("\nTotal fish: " + result);
     }
 }

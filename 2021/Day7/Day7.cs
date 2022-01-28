@@ -12,7 +12,7 @@ class Day7
     #region Part1
     static void Part1()
     {
-        int[] input = Array.ConvertAll(File.ReadAllText(@"D:/Code/input.txt").Split(','), int.Parse);
+        int[] input = Array.ConvertAll(File.ReadAllText(@"D:/AdventOfCode/2021/Day7/input.txt").Split(','), int.Parse);
         Array.Sort(input);
 
         int totalFuel = 0;
@@ -48,8 +48,8 @@ class Day7
             }
         }
 
-        //Console.WriteLine("Number: " + input[0]);
-        //Console.WriteLine("Fuel: " + totalFuel);
+        File.WriteAllText("D:/AdventOfCode/2021/Day7/result.txt", totalFuel.ToString());
+        Console.WriteLine("Fuel: " + totalFuel);
     }
 
     static void CalcTotals(int[] input, int middleValue, out int middleIndex, out int belowTotal, out int aboveTotal)
@@ -124,7 +124,7 @@ class Day7
 
     static void Part2()
     {
-        int[] input = Array.ConvertAll(File.ReadAllText(@"D:/Code/input.txt").Split(','), int.Parse);
+        int[] input = Array.ConvertAll(File.ReadAllText(@"D:/AdventOfCode/2021/Day7/input.txt").Split(','), int.Parse);
         Array.Sort(input);
 
         int totalFuel = 0;
@@ -137,8 +137,7 @@ class Day7
             for (int j = 0; j < input.Length; j++)
             {
                 int n = Math.Abs(input[j] - i);
-                totalFuel += n;
-                //totalFuel += (n * n + n) / 2;
+                totalFuel += (n * n + n) / 2;
             }
 
             if (totalFuel < cheapestFuel)
@@ -148,7 +147,7 @@ class Day7
             }
         }
 
-        //Console.WriteLine("Index: " + cheapestValue);
-        //Console.WriteLine("Fuel: " + cheapestFuel);
+        File.WriteAllText("D:/AdventOfCode/2021/Day7/result.txt", cheapestFuel.ToString());
+        Console.WriteLine("Fuel: " + cheapestFuel);
     }
 }

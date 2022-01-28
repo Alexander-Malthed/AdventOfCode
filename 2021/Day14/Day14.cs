@@ -6,7 +6,7 @@ class Day14
 {
     static void Main(string[] args)
     {
-        string[] input = File.ReadAllLines(@"D:/Code/input.txt");
+        string[] input = File.ReadAllLines(@"D:/AdventOfCode/2021/Day14/input.txt");
         Dictionary<string, char> rules = new Dictionary<string, char>();
         Dictionary<string, ulong> pairs = new Dictionary<string, ulong>();
 
@@ -77,8 +77,10 @@ class Day14
             }
         }
 
+        ulong result = most - least;
         System.Console.WriteLine("Least common: " + least);
         System.Console.WriteLine("Most common: " + most);
-        System.Console.WriteLine("Result: " + (most - least));
+        System.Console.WriteLine("Result: " + result);
+        File.WriteAllText("D:/AdventOfCode/2021/Day14/result.txt", result.ToString());
     }
 }

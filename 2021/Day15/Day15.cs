@@ -16,7 +16,7 @@ namespace Day15
         static void Main(string[] args)
         {
             // Construct the Node jagged array
-            int[][] intMap = File.ReadAllLines("D:/Code/input.txt")
+            int[][] intMap = File.ReadAllLines("D:/AdventOfCode/2021/Day15/input.txt")
                 .Select((l, i) => l
                     .Select((c, j) => Convert.ToInt32(c.ToString()))
                     .ToArray())
@@ -77,8 +77,10 @@ namespace Day15
                 current = current.parent;
                 totalRisk += current.risk;
             }
+
+            File.WriteAllText("D:/AdventOfCode/2021/Day15/result.txt", totalRisk.ToString());
             Console.WriteLine($"total risk: {totalRisk}");
-            Console.WriteLine($"time: {sw.ElapsedMilliseconds}");
+            Console.WriteLine($"time: {sw.ElapsedMilliseconds}ms");
         }
 
         // Copy the puzzle input to a 5*5 grid of duplicates.

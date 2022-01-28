@@ -10,3 +10,4 @@ D:\AdventOfCode\2021\Day1\obj\Debug\netcoreapp3.1\Day1.AssemblyInfo.cs
 D:\AdventOfCode\2021\Day1\obj\Debug\netcoreapp3.1\Day1.dll
 D:\AdventOfCode\2021\Day1\obj\Debug\netcoreapp3.1\Day1.pdb
 D:\AdventOfCode\2021\Day1\obj\Debug\netcoreapp3.1\Day1.genruntimeconfig.cache
+D:\AdventOfCode\2021\Day1\obj\Debug\netcoreapp3.1\Day1.csprojAssemblyReference.cache

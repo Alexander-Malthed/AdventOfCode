@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 
+// This one is very slow. Not my proudest solution.
+
 class Day12
 {
     static Dictionary<string, List<string>> allCaves = new Dictionary<string, List<string>>();
@@ -10,7 +12,7 @@ class Day12
 
     static void Main(string[] args)
     {
-        string[] input = File.ReadAllLines(@"D:/Code/input.txt");
+        string[] input = File.ReadAllLines(@"D:/AdventOfCode/2021/Day12/input.txt");
         List<string> startCave = new List<string>();
         List<string> allSmallCaves = new List<string>();
 
@@ -68,7 +70,10 @@ class Day12
                 ExploreCave(connectedCave, visitedSmallCaves, path, 0);
             }
         }
-        Console.WriteLine(paths.Count);
+
+        int result = paths.Count;
+        File.WriteAllText("D:/AdventOfCode/2021/Day12/result.txt", result.ToString());
+        Console.WriteLine(result);
     }
 
     static void ExploreCave(string thisCave, List<string> previousSmallCaves, string path, int numVisitMedium)

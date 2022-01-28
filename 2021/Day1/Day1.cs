@@ -5,7 +5,7 @@ class Day1
 {
     static void Main(string[] args)
     {
-        int[] input = Array.ConvertAll(File.ReadAllLines("D:/Code/input.txt"), s => int.Parse(s));
+        int[] input = Array.ConvertAll(File.ReadAllLines("D:/AdventOfCode/2021/Day1/input.txt"), s => int.Parse(s));
         int result = 0;
 
         for (int i = 0; i < input.Length - 3; i++)
@@ -16,7 +16,7 @@ class Day1
             }
         }
 
+        File.WriteAllText("D:/AdventOfCode/2021/Day1/result.txt", result.ToString());
         Console.WriteLine(result);
-        Console.ReadKey();
     }
 }
