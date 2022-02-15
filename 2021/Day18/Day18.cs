@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System;
+using System.Diagnostics;
 
 namespace Day18
 {
@@ -10,6 +11,9 @@ namespace Day18
 
         static void Main(string[] args)
         {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
             string[] input = File.ReadAllLines("D:/AdventOfCode/2021/Day18/input.txt");
 
             Pair resultPair;
@@ -19,12 +23,14 @@ namespace Day18
 
             // What is the largest magnitude of any sum of two different lines?
             resultPair = Part2(input);
-
             PrintString(resultPair);
 
             int result = GetMagnitudeOfFinalSum(resultPair);
             Console.WriteLine("Magnitude: " + result);
-            File.WriteAllText("D:/AdventOfCode/2021/Day18/result.txt", result.ToString());
+            File.WriteAllText("D:/AdventOfCode/2021/Day18/result.txt", $"Result: {result}\nTime: {sw.ElapsedMilliseconds}ms");
+            
+            sw.Stop();
+            Console.WriteLine(sw.ElapsedMilliseconds + "ms");
         }
 
         static Pair Part1(string[] input)
