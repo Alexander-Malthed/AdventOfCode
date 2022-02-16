@@ -1,2 +1,0 @@
-Result: 4638
-Time: 787ms
