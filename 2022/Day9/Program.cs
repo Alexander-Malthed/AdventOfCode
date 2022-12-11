@@ -35,6 +35,22 @@
             return visitedPositions.Count;
         }
 
+        static void UpdatePositionPart1(bool increment, ref int positionToUpdate, ref int[] headPos, ref int[] tailPos, int steps, ref HashSet<Tuple<int, int>> visitedPositions) {
+            int[] headPreviousPos = new int[2];
+
+            for (int step = 0; step < steps; step++) {
+                headPos.CopyTo(headPreviousPos, 0);
+                positionToUpdate += increment ? 1 : -1;
+
+                if (Math.Abs(headPos[0] - tailPos[0]) > 1
+                    || Math.Abs(headPos[1] - tailPos[1]) > 1) {
+                    headPreviousPos.CopyTo(tailPos, 0);
+                }
+
+                visitedPositions.Add(Tuple.Create(tailPos[0], tailPos[1]));
+            }
+        }
+
         static int Part2(string[] input) {
             int numberOfKnots = 10;
             Knot[] knots = new Knot[numberOfKnots];
@@ -70,25 +86,7 @@
             return visitedPositions.Count;
         }
 
-        static void UpdatePositionPart1(bool increment, ref int positionToUpdate, ref int[] headPos, ref int[] tailPos, int steps, ref HashSet<Tuple<int, int>> visitedPositions) {
-            int[] headPreviousPos = new int[2];
-
-            for (int step = 0; step < steps; step++) {
-                headPos.CopyTo(headPreviousPos, 0);
-                positionToUpdate += increment ? 1 : -1;
-
-                if (Math.Abs(headPos[0] - tailPos[0]) > 1
-                    || Math.Abs(headPos[1] - tailPos[1]) > 1) {
-                    headPreviousPos.CopyTo(tailPos, 0);
-                }
-
-                visitedPositions.Add(Tuple.Create(tailPos[0], tailPos[1]));
-            }
-        }
-
         static void UpdatePositionPart2(bool increment, ref int positionToUpdate, ref Knot head, ref Knot tail, int steps, ref HashSet<Tuple<int, int>> visitedPositions) {
-            int[] headPreviousPos = new int[2];
-
             for (int step = 0; step < steps; step++) {
                 positionToUpdate += increment ? 1 : -1;
 
@@ -97,9 +95,6 @@
         }
 
         static void UpdateTailPart2(ref Knot head, ref Knot tail, ref HashSet<Tuple<int, int>> visitedPositions) {
-            int[] tailPreviousPos = new int[2];
-            tail.Position.CopyTo(tailPreviousPos, 0);
-
             if (Math.Abs(head.Position[0] - tail.Position[0]) + Math.Abs(head.Position[1] - tail.Position[1]) >= 3) {
                 tail.Position[0] = head.Position[0] > tail.Position[0] ? tail.Position[0] + 1 : tail.Position[0] - 1;
                 tail.Position[1] = head.Position[1] > tail.Position[1] ? tail.Position[1] + 1 : tail.Position[1] - 1;
