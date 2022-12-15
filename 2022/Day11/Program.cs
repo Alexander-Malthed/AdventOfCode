@@ -4,7 +4,7 @@
         static void Main(string[] args) {
             string[] input = File.ReadAllLines("D:/AdventOfCode/2022/Day11/input.txt");
 
-            //Console.WriteLine(Part1(input));
+            Console.WriteLine(Part1(input));
             Console.WriteLine(Part2(input));
         }
 
